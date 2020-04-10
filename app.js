@@ -53,10 +53,20 @@ app.get('/apps', (req, res) => {
     res.send(results);
 })
 
+module.exports = app; //exporting the Express app object (17.5, p. 22)
 
 
+
+
+/*
+When testing, we don't need the server listening on the port the way it does when we run 
+the application normally. So we can separate the application code from the server controller 
+code. The server controller code is the part that starts the server listening on the given port. 
+The application code is everything else. (17.5, p. 22)
+
+//moved to server.js
 app.listen(8000, ()=> {
     console.log('Express is listening on port 8000!');
 })
-
+*/
 

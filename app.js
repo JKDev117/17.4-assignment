@@ -46,7 +46,7 @@ app.get('/apps', (req, res) => {
         let filteredResults = results.filter(app => 
             app.Genres.includes(genres)
         )
-        res.send(filteredResults);
+        return res.send(filteredResults);
     }
 
     //send response
